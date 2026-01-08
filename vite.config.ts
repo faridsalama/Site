@@ -4,8 +4,9 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  // نستخدم './' لضمان أن جميع الروابط في ملفات الـ HTML والـ CSS تكون نسبية
-  base: './', 
+  // هذا السطر هو الأهم لعمل الموقع على GitHub Pages
+  // يجب أن يطابق اسم الـ Repository الخاص بك
+  base: '/Site/', 
   define: {
     'process.env': {
       API_KEY: JSON.stringify(process.env.API_KEY || '')
@@ -15,7 +16,6 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: false,
-    // إعدادات إضافية لضمان استقرار الملفات المخرجة
     rollupOptions: {
       output: {
         manualChunks: undefined,
