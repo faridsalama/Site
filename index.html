@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEO-ARCHITECT OF REALITY</title>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime",
+    "@google/genai": "https://esm.sh/@google/genai",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <style>
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 5px #00e6e6, 0 0 10px #00e6e6; }
+            50% { box-shadow: 0 0 15px #00e6e6, 0 0 30px #00e6e6; }
+        }
+        .pulse-glow:hover {
+            animation: pulse-glow 1.5s infinite ease-in-out;
+        }
+        body {
+            background-color: #0a0a0c;
+            color: #e0e0e0;
+            margin: 0;
+            overflow: hidden; /* Manage overflow within the app */
+        }
+        .glass-panel {
+            background: rgba(10, 15, 20, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 230, 230, 0.2);
+        }
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.2);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #00e6e6;
+            border-radius: 2px;
+        }
+    </style>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="font-['Share_Tech_Mono']">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>

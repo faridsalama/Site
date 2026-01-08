@@ -1,0 +1,7 @@
+{
+  "name": "NEO-ARCHITECT OF REALITY Portfolio",
+  "description": "A futuristic, holographic Tech-Noir portfolio interface featuring medical cybernetics and Web3 elements.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
