@@ -5,15 +5,21 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: './', // Ensures relative paths for GitHub Pages
+  base: './', // مهم جداً لجعل الروابط نسبية وتعمل على GitHub Pages
   define: {
-    // Provide a shim for process.env used in the Gemini service
     'process.env': {
       API_KEY: process.env.API_KEY || ''
     }
   },
   build: {
     outDir: 'dist',
-    sourcemap: true,
+    assetsDir: 'assets',
+    sourcemap: false,
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+      },
+    },
   }
 });
