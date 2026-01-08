@@ -2,23 +2,23 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: './', // مهم جداً لجعل الروابط نسبية وتعمل على GitHub Pages
+  // نستخدم './' لضمان أن جميع الروابط في ملفات الـ HTML والـ CSS تكون نسبية
+  base: './', 
   define: {
     'process.env': {
-      API_KEY: process.env.API_KEY || ''
+      API_KEY: JSON.stringify(process.env.API_KEY || '')
     }
   },
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: false,
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
+    // إعدادات إضافية لضمان استقرار الملفات المخرجة
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
       },
     },
   }
